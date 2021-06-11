@@ -4,5 +4,10 @@
 <br>
 <hr>
 <h4>Requis</h4>
+<ul>
+  <li>Créer un base de données vièrge </li>
+  <li>Passez en mode super utilisateur</li>
+  <li>Installez le module [ Schoolmng ]</li>
+</ul>
 <hr>
 
