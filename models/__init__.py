@@ -5,4 +5,4 @@ from . import iut_Agenda
 from . import iut_Classe
 from . import iut_Cours
 from . import iut_Eleve
-from . import iut_Professeur
+from . import res_partner

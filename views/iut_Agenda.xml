@@ -1,1 +1,48 @@
- 
+<odoo>
+    <record id="iut_schedule_action" model="ir.actions.act_window">
+        <field name="name">Horaire</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">iut.schedule</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="iut_schedule_tree" model="ir.ui.view">
+        <field name="name">Agenda</field>
+        <field name="name">iut.schedule.tree</field>
+        <field name="model">iut.schedule</field>
+        <field name="arch" type="xml">
+            <tree string="Liste créneaux" default_order="date_start">
+                <field name="course_id" string="Cours"/>
+                <field name="room" string="Salle de cours"/>
+                <field name="date_start" string="Début du cours"/>
+                <field name="date_stop" string="Fin du cours"/>
+                <field name="class_id" string="Classe"/>
+            </tree>
+        </field>
+    </record>
+    <record id="iut_schedule_form" model="ir.ui.view">
+        <field name="name">iut.schedule.form</field>
+        <field name="model">iut.schedule</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div>
+                        <h1>
+                            <field name="course_id"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="date_start"/>
+                                <field name="date_stop"/>
+                            </group>
+                            <group>
+                                <field name="class_id"/>
+                                <field name="room"/>
+                            </group>
+                        </group>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

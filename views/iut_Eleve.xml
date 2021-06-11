@@ -1,1 +1,49 @@
- 
+<odoo>
+    <record id="iut_eleve_action" model="ir.actions.act_window">
+        <field name="name">course</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">iut.student</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="iut_class_tree" model="ir.ui.view">
+        <field name="name">iut.student.tree</field>
+        <field name="model">iut.student</field>
+        <field name="arch" type="xml">
+            <tree string="Liste des eleves">
+                <field name="firstname" string="prenom de l'eleve"/>
+                <field name="lastname" string="Nom de l'eleve"/>
+                <field name="birthdate" string="Anniversaire"/>
+                <field name="age" string="Age"/>
+                <field name="class_id" string="Classe de l'eleve"/>
+            </tree>
+        </field>
+    </record>
+    <record id="iut_schedule_form" model="ir.ui.view">
+        <field name="name">iut.student.form</field>
+        <field name="model">iut.student</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div>
+                        <h1>
+                            <group>
+                                <field name="firstname"/>
+                                <field name="lastname"/>
+                            </group>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="birthdate"/>
+                            </group>
+                            <group>
+                                <field name="age"/>
+                                <field name="class_id"/>
+                            </group>
+                        </group>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

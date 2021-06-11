@@ -1,19 +1,20 @@
 <odoo>
         <data>
             <!-- Top menu item -->
-            <menuitem name="School Management" id="menu_iutdevice_root" sequence="85"/>
-            <!-- Menu iutdevice Devices -->
-            <menuitem name="Devices" id="menu_iutdevice_device_root" parent="menu_iutdevice_root" sequence="10"/>
-            <menuitem name="All Devices" id="menu_iutdevice_device" parent="menu_iutdevice_device_root" action="iut_it_device_action" sequence="11"/>
-            <menuitem name="Models" id="menu_iutdevice_model" parent="menu_iutdevice_device_root" action="iut_it_model_action" sequence="12"/>
-            <menuitem name="Brands" id="menu_iutdevice_brand" parent="menu_iutdevice_device_root" action="iut_it_brand_action" sequence="13"/>
-            <menuitem name="Types" id="menu_iutdevice_type" parent="menu_iutdevice_device_root" action="iut_model_type_action" sequence="14"/>
-            <!-- Menu iutdevice Employees -->
-            <menuitem name="Partners" id="menu_iutdevice_partner_root" parent="menu_iutdevice_root" sequence="20"/>
-            <menuitem name="All Partners" id="menu_iutdevice_partner" parent="menu_iutdevice_partner_root" action="res_partner_action" sequence="21"/>
-            <menuitem name="Rooms" id="menu_iutdevice_room" parent="menu_iutdevice_partner_root" action="iut_room_action" sequence="22"/>
-            <menuitem name="Offices" id="menu_iutdevice_office" parent="menu_iutdevice_partner_root" action="iut_office_action" sequence="23"/>
-            <!-- Menu iutdevice Configuration -->
+            <menuitem name="SchoolManagement" id="menu_iutdevice_root" sequence="85"/>
+            <!-- Menu Oddo-school Devices -->
+            <menuitem name="Cours Menu" id="menu_iutdevice_device_root" parent="menu_iutdevice_root" sequence="10"/>
+            <menuitem name="Agenda" id="menu_iutdevice_device" parent="menu_iutdevice_device_root" action="iut_schedule_action" sequence="11"/>
+            
+             <menuitem name="Cours" id="menu_iutdevice_model" parent="menu_iutdevice_device_root" action="iut_course_action" sequence="12"/>
 
+            <menuitem name="Gestion" id="menu_iutdevice_device_gestion" parent="menu_iutdevice_root" sequence="13"/>
+            <menuitem name="Classe" id="menu_classe" parent="menu_iutdevice_device_gestion" action="iut_class_action" sequence="14"/>
+
+
+
+            <menuitem name="Eleves" id="menu_iutdevice_brand" action="iut_eleve_action" parent="menu_iutdevice_device_gestion" sequence="15"/>
+            <menuitem name="Professeurs" id="menu_iutdevice_type" action="res_partner_action" parent="menu_iutdevice_device_gestion" sequence="16"/> 
+ 
         </data>
     </odoo>
