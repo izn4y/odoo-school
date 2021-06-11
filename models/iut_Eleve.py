@@ -3,10 +3,10 @@ from odoo import api, fields, models
 
 class IutEleve(models.Model):
 	_name = 'iut.student'
-	_description = 'Une courte description'
+	_description = 'Gestion des eleves'
 
-	firstname = fields.Char('Name')
-	lastname = fields.Char('lastname')
+	firstname = fields.Char('Prénom')
+	lastname = fields.Char('Nom')
 	birthdate = fields.Date('Date de naissance')
-	age = fields.Integer('Date de naissance')
+	age = fields.Integer('Age')
 	class_id = fields.Many2one('iut.class')

@@ -3,7 +3,7 @@ from odoo import api, fields, models
 
 class IutAgenda(models.Model):
     _name = 'iut.schedule'
-    _description = 'Une courte description'
+    _description = 'Emploi du temps'
 
     date_start = fields.Date('Horaire début')
     date_stop = fields.Date('Horaire fin')

@@ -1,40 +1,38 @@
- <odoo>
-    
-
-         <record id="res_partner_action" model="ir.actions.act_window">
-             <field name="name">Professeur</field>
-             <field name="type">ir.actions.act_window</field>
-             <field name="res_model">res.partner</field>
-             <field name="view_mode">tree,form</field>
-         </record>
- 
-         <record id="base.view_partner_tree" model="ir.ui.view">
-             <field name="name">res.partner.tree</field>
-             <field name="model">res.partner</field>
-             <field name="arch" type="xml">
-                 <tree string="Professeur">
-                     <field name="class_id" string="Classe de l'eleve"/>
-                     <field name="name" string="Nom du prof wllh"/>
-                 </tree>
-             </field>
-         </record>
-  
-        <record id="base.view_partner_form" model="ir.ui.view">
-            <field name="name">res.partner.form</field>
-            <field name="model">res.partner</field>
-            <field name="arch" type="xml">
-                <form>
-                    <sheet>
-                        <div>
-                            <h1>
-                                <group>
-                                    <field name="name"/>
-                                    <field name="class_id"/>
-                                </group>
-                            </h1>
-                        </div>
-                    </sheet>
-                </form>
-            </field>
-        </record>
-    </odoo>
+<odoo>
+    <record id="res_partner_action" model="ir.actions.act_window">
+        <field name="name">Professeur</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- View Tree -->
+    <record id="base.view_partner_tree" model="ir.ui.view">
+        <field name="name">res.partner.tree</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <tree string="Professeur">
+                <field name="class_id" string="Classe"/>
+                <field name="name" string="Professeur"/>
+            </tree>
+        </field>
+    </record>
+<!-- View Form -->
+    <record id="base.view_partner_form" model="ir.ui.view">
+        <field name="name">res.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div>
+                        <h1>
+                            <group>
+                                <field name="name"/>
+                                <field name="class_id"/>
+                            </group>
+                        </h1>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
